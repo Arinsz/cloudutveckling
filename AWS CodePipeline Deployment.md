@@ -87,7 +87,7 @@ sudo nano /etc/nginx/conf.d/default.conf
 
 * In the configuration file we need to add some code to redirect HTTP Traffic to HTTPS:
 
-Nginx Configuration(https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/nginx.jpg))
+![Nginx Configuration](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/nginx.jpg))
 
 
 

@@ -2,8 +2,8 @@
 
 > **Note:** I am continuously working on enhancing ArinsTechStore. Stay tuned for updates and new features!
 
-![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida1.jpg)
-![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida2.jpg)
+![Build Success](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida1.jpg)
+![Build Success](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida2.jpg)
 
 
 
@@ -25,11 +25,11 @@ Arins Tech Store is a Spring Boot application using AWS Cognito with a database 
 ---
 > **Note:** You will need to do the AWS Cognito Setup and Create S3 Bucket Setup before Deployment Guides..
 ## Getting Started
-* For deployment using AWS CodePipeline and Amazon RDS Database, refer to the [AWS CodePipeline Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/AWS%20CodePipeline%20Deployment.md).
+* For deployment using AWS CodePipeline and Amazon RDS Database, refer to the [AWS CodePipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/AWS%20CodePipeline%20Deployment.md).
 
-* For deployment using Jenkins, refer to the [Jenkins Pipeline Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/1349e93cc6d6e1f0659f0ac71daaf92307789ffa/JENKINS%20DEPLOYMENT.md).
+* For deployment using Jenkins, refer to the [Jenkins Pipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/JENKINS%20DEPLOYMENT.md).
 
-* For running locally, refer to the [Running Locally Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/Running%20Locally.md).
+* For running locally, refer to the [Running Locally Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/Running%20Locally.md).
 ---
 
 ### AWS Cognito Setup

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account Deleted - Arins Tech Store</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page background image */
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url('/images/techstorebild.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-attachment: fixed;
+        }
+
+        /* Confirmation box styles */
+        .confirmation-box {
+            text-align: center;
+            max-width: 500px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .confirmation-box h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-box p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(to right, #61a0ff, #5b7be3);
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, rgba(100, 91, 227, 0.96), #618eff);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="confirmation-box">
+    <h1>Account Deleted</h1>
+    <p>Your account has been successfully deleted.</p>
+    <a class="button" href="/">Return to Home</a>
+    <a class="button is-info" href="https://arins.auth.eu-north-1.amazoncognito.com/signup?response_type=code&client_id=6umf0bm445vg0p2rnv99lnvcti&scope=openid&state=hDW6zxH9KDtr4IjWSJYWHYy0kOYBLbsIoBngiArsYQM%3D&redirect_uri=http://localhost:8080/login/oauth2/code/cognito&nonce=tdcr1d48rovjtQMq4lH1nNosnbOliX0j-T8-x2vCZqM">
+        Create new Account
+    </a>a>
+</div>
+
+</body>
+</html>

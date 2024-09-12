@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arins Tech Store</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full-page background image */
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url("/images/techstorebild.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-attachment: fixed;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Product container styles */
+        .product-container {
+            text-align: center;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            margin-top: 80px;
+            width: 90%;
+            position: relative;
+        }
+
+        .product-container h2 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .product-container .field {
+            margin-bottom: 20px;
+        }
+
+        .product-container .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .product-container .input {
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        .product-container .input.title,
+        .product-container .input.description,
+        .product-container .input.price {
+            width: 100%;
+        }
+
+        .product-container .input[type="file"] {
+            margin-top: 15px;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(to right, #61a0ff, #5b7be3);
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+            margin: 10px 5px;
+        }
+
+        .button:hover {
+            background: linear-gradient(to right, rgba(100, 91, 227, 0.96), #618eff);
+            transform: scale(1.05);
+        }
+
+        .view-all-products {
+            margin-top: 20px;
+        }
+
+        .view-all-products a {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-brand">
+        <!-- Show different text based on authentication status -->
+        <div sec:authorize="isAuthenticated()">
+            <a class="navbar-item" href="/products">
+                <h1>You can now View Products</h1>
+            </a>
+        </div>
+        <div sec:authorize="isAnonymous()">
+            <a class="navbar-item" href="#">
+                <h1>Login to view Products</h1>
+            </a>
+        </div>
+    </div>
+    <div class="navbar-end">
+        <div class="buttons">
+            <!-- Check if the user is authenticated -->
+            <div sec:authorize="isAuthenticated()">
+                <div class="box">
+                    Hello, <strong th:text="${#authentication.name}"></strong>!
+                </div>
+                <form id="logoutForm" action="/logout" method="post">
+                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                    <button class="button is-danger" type="submit">Logout</button>
+                </form>
+                <form th:action="@{/delete-account}" method="post">
+                    <button class="button is-danger" type="submit">Delete Account</button>
+                </form>
+            </div>
+
+            <!-- Check if the user is anonymous -->
+            <div sec:authorize="isAnonymous()">
+                <a class="button is-primary" href="/oauth2/authorization/cognito">Log in with Amazon Cognito</a>
+                <a class="button is-info" href="https://arins.auth.eu-north-1.amazoncognito.com/signup?response_type=code&client_id=6umf0bm445vg0p2rnv99lnvcti&scope=openid&state=hDW6zxH9KDtr4IjWSJYWHYy0kOYBLbsIoBngiArsYQM%3D&redirect_uri=http://localhost:8080/login/oauth2/code/cognito&nonce=tdcr1d48rovjtQMq4lH1nNosnbOliX0j-T8-x2vCZqM">
+                    Sign up
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Display products if authenticated -->
+<div sec:authorize="isAuthenticated()">
+    <section class="product-container">
+        <h2>Add Your Product, Images will upload to AWS S3 Bucket</h2>
+
+        <form th:action="@{/products/add}" method="post" class="todo-form" enctype="multipart/form-data">
+            <div class="field">
+                <div class="input-group">
+                    <!-- Title input -->
+                    <input class="input title" type="text" name="title" placeholder="Enter product title" required>
+                    <!-- Description input -->
+                    <input class="input description" type="text" name="description" placeholder="Description">
+                </div>
+            </div>
+
+            <div class="field">
+                <!-- Price input -->
+                <input class="input price" type="number" step="0.01" name="price" placeholder="Price">
+            </div>
+
+            <div class="field">
+                <!-- File input for image -->
+                <label for="productImage">Product Image:</label>
+                <input id="productImage" class="input" type="file" name="image" accept="image/*">
+            </div>
+
+            <div class="control">
+                <!-- Submit button -->
+                <button class="button is-primary" type="submit">Add Product</button>
+            </div>
+
+            <div class="view-all-products">
+                <a class="button is-primary" href="/products">View My Products</a>
+                <a class="button is-primary" href="/products/all">View All Products</a>
+            </div>
+        </form>
+    </section>
+</div>
+
+<div sec:authorize="isAnonymous()">
+    <section class="hero">
+        <h1>Welcome to ArinsTechStore</h1>
+    </section>
+</div>
+
+<script>
+    // JavaScript to show a logout popup message
+    function showLogoutMessage(event) {
+        event.preventDefault(); // Prevent the form from submitting immediately
+        alert('You have been logged out!');
+        event.target.submit(); // Submit the form after showing the alert
+    }
+
+    // Attach the event listener after the document loads
+    window.onload = function() {
+        const logoutForm = document.getElementById('logoutForm');
+        if (logoutForm) {
+            logoutForm.addEventListener('submit', showLogoutMessage);
+        }
+    }
+</script>
+
+</body>
+</html>

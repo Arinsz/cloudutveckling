@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - Arins Tech Store</title>
+    <style>
+        /* Add your styles here */
+    </style>
+</head>
+<body>
+<h1>Verify Your Email</h1>
+<form action="/verify" method="post">
+    <input type="hidden" name="username" value="${username}" />
+    <label for="code">Verification Code:</label>
+    <input type="text" id="code" name="code" required />
+    <button type="submit">Verify</button>
+</form>
+<a href="/sign-up">Back to Sign Up</a>
+</body>
+</html>

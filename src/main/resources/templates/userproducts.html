@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <style>
+        /* Custom Styles */
+        body {
+            background: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        nav {
+            background-color: #282c34;
+            padding: 1rem;
+            color: #fff;
+        }
+
+        nav .navbar-item {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+
+        nav .navbar-item:hover {
+            text-decoration: underline;
+        }
+
+        .product-container {
+            margin-top: 2rem;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-content {
+            padding: 1rem;
+        }
+
+        .product h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center; /* Center the buttons horizontally */
+            gap: 10px; /* Optional: Space between the buttons */
+            margin-top: 2rem; /* Optional: Add space above the container */
+        }
+
+        .button-container .button {
+            margin: 0; /* Reset margin if needed */
+        }
+
+        .notification {
+            margin-bottom: 1rem; /* Space below the notification */
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a class="navbar-item" href="/home">Home</a>
+    <a class="navbar-item" href="/products">Your Products</a>
+    <a class="navbar-item" href="/logout">Logout</a>
+</nav>
+
+<section class="section product-container">
+    <div class="container">
+        <h2 class="title has-text-centered">Your Products</h2>
+
+        <!-- Information Notification -->
+        <div class="notification is-info">
+            <p>Images are uploaded to S3 Bucket
+        </div>
+
+        <div class="columns is-multiline is-centered">
+            <div class="column is-12-mobile is-6-tablet is-4-desktop" th:each="product : ${products}">
+                <div class="product box">
+                    <img th:src="${product.imageUrl}" alt="Product Image"/>
+                    <div class="product-content">
+                        <h3 th:text="${product.title}">Product Title</h3>
+                        <p th:text="${product.description}">Product Description</p>
+                        <p th:text="'Price: $' + ${product.price}" class="has-text-weight-bold">Product Price</p>
+                        <p th:text="'User ID: ' + ${product.userId}" class="has-text-grey">User ID</p> <!-- Display User ID -->
+                    </div>
+                    <!-- Delete Button -->
+                    <div class="has-text-centered">
+                        <form th:action="@{/products/delete}" method="post">
+                            <input type="hidden" name="id" th:value="${product.id}"/>
+                            <button class="button is-danger is-small" type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add any additional sections or buttons here -->
+<!-- Button to Go Back to Home -->
+<div class="button-container">
+    <a class="button is-link" href="/home">Go Back to Home</a>
+</div>
+</body>
+</html>

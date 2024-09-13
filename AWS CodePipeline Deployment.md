@@ -60,7 +60,7 @@ sudo mysql -u root -p
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password'; 
 FLUSH PRIVILEGES;
 CREATE DATABASE yourDbName;
-GRANT ALL PRIVILEGES ON techstore.* TO 'root'@'localhost';
+GRANT ALL PRIVILEGES ON yourDbName.* TO 'root'@'localhost';
 SHOW GRANTS FOR 'root'@'localhost';
    ```
 

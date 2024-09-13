@@ -11,7 +11,7 @@
 ---
 ## Introduction
 
-Arins Tech Store is a Spring Boot application using AWS Cognito with a database on EC2(Linux AMI) based on your choice of deployment. This application is designed to manage tech products, with features including:
+Arins Tech Store is a Spring Boot application using AWS Cognito with a SQL database on EC2(Linux AMI). This application is designed to manage tech products, with features including:
 
 ### Key Features
 
@@ -25,7 +25,7 @@ Arins Tech Store is a Spring Boot application using AWS Cognito with a database 
 ---
 > **Note:** You will need to do the AWS Cognito Setup and Create S3 Bucket Setup before Deployment Guides..
 ## Getting Started
-* For deployment using AWS CodePipeline and Amazon RDS Database, refer to the [AWS CodePipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/AWS%20CodePipeline%20Deployment.md).
+* For deployment using AWS CodePipeline, refer to the [AWS CodePipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/AWS%20CodePipeline%20Deployment.md).
 
 * For deployment using Jenkins, refer to the [Jenkins Pipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/JENKINS%20DEPLOYMENT.md).
 

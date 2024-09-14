@@ -65,14 +65,11 @@ Use SSH to connect to your EC2 instance.
 Download the X-Ray Daemon:
 
 ```
-sudo yum install -y aws-xray-daemon
+wget https://s3.us-west-2.amazonaws.com/aws-xray-assets.us-west-2/xray-daemon/aws-xray-daemon-3.x.rpm
+sudo yum install -y aws-xray-daemon-3.x.rpm
 sudo systemctl start xray
 sudo systemctl enable xray
-sudo ./xray -o (navigate to the xray folder first) 
+sudo systemctl status xray
 ```
 
-* Ensure the daemon is running and listening on port 2000 by checking the process list:
-
-```
-ps aux | grep xray
-```
+---

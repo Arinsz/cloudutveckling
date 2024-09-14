@@ -24,7 +24,7 @@ Go to Amazon EC2 instances and launch one instance.
 * **IAM Role**: We need a role for this instance to have AmazonS3FullAccess & AmazonRDSFullAccess. If you don't have one you can create on in IAM/Roles.
 * **Security group**: Make sure you have port 3306, 8080, 22 open in inbound rules.
 
-Start the instance and login with SSH. !!!!!
+Start the instance and login with SSH.
 
    ```bash
    sudo yum update -y

@@ -72,6 +72,6 @@ sudo systemctl enable xray
 sudo systemctl status xray
 ```
 
-![Xray](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/XrayEc2.jpg)
+![Xray](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/XrayEc2.jpg)
 
 ---

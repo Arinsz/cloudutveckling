@@ -4,7 +4,7 @@
 
 ![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida1.jpg)
 ![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida2.jpg)
-![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida2.jpg)
+![Build Success](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/Databasdiagram.jpg)
 
 
 

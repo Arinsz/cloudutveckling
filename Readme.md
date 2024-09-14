@@ -2,8 +2,8 @@
 
 > **Note:** I am continuously working on enhancing ArinsTechStore. Stay tuned for updates and new features!
 
-![Build Success](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida1.jpg)
-![Build Success](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida2.jpg)
+![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida1.jpg)
+![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/hemsida2.jpg)
 
 
 
@@ -11,7 +11,7 @@
 ---
 ## Introduction
 
-Arins Tech Store is a Spring Boot application using AWS Cognito with a SQL database on EC2(Linux AMI). This application is designed to manage tech products, with features including:
+Arins Tech Store is a Spring Boot application using AWS Cognito with a database on EC2(Linux AMI) based on your choice of deployment. This application is designed to manage tech products, with features including:
 
 ### Key Features
 
@@ -25,11 +25,15 @@ Arins Tech Store is a Spring Boot application using AWS Cognito with a SQL datab
 ---
 > **Note:** You will need to do the AWS Cognito Setup and Create S3 Bucket Setup before Deployment Guides..
 ## Getting Started
-* For deployment using AWS CodePipeline, refer to the [AWS CodePipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/AWS%20CodePipeline%20Deployment.md).
 
-* For deployment using Jenkins, refer to the [Jenkins Pipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/JENKINS%20DEPLOYMENT.md).
+* For deployment using AWS CodePipeline, refer to the [AWS CodePipeline Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/MDFiles/AWS%20CodePipeline%20Deployment.md).
 
-* For running locally, refer to the [Running Locally Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/Running%20Locally.md).
+* For deployment using Jenkins, refer to the [Jenkins Pipeline Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/MDFiles/JENKINS%20DEPLOYMENT.md).
+
+* For running locally, refer to the [Running Locally Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/MDFiles/Running%20Locally.md).
+
+* For details on how to set up AWS X-Ray, refer to the [AWS X-Ray Setup Guide](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/MDFiles/XrayGuide.md).
+
 ---
 
 ### AWS Cognito Setup
@@ -66,6 +70,8 @@ To enable user authentication and authorization with AWS Cognito, follow these s
    ```
 
 
-#### Contact info test:
+
+
+#### Contact info:
 
 * Arin Sarafraz at Arin.Sz@hotmail.com

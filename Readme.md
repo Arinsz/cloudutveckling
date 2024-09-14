@@ -26,13 +26,13 @@ Arins Tech Store is a Spring Boot application using AWS Cognito with a database 
 > **Note:** You will need to do the AWS Cognito Setup and Create S3 Bucket Setup before Deployment Guides..
 ## Getting Started
 
-* For deployment using AWS CodePipeline, refer to the [AWS CodePipeline Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/MDFiles/AWS%20CodePipeline%20Deployment.md).
+* For deployment using AWS CodePipeline, refer to the [AWS CodePipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/MDFiles/AWS%20CodePipeline%20Deployment.md).
 
-* For deployment using Jenkins, refer to the [Jenkins Pipeline Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/MDFiles/JENKINS%20DEPLOYMENT.md).
+* For deployment using Jenkins, refer to the [Jenkins Pipeline Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/MDFiles/JENKINS%20DEPLOYMENT.md).
 
-* For running locally, refer to the [Running Locally Deployment Guide.](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/MDFiles/Running%20Locally.md).
+* For running locally, refer to the [Running Locally Deployment Guide.](https://github.com/Arinsz/cloudutveckling/blob/main/MDFiles/Running%20Locally.md).
 
-* For details on how to set up AWS X-Ray, refer to the [AWS X-Ray Setup Guide](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/MDFiles/XrayGuide.md).
+* For details on how to set up AWS X-Ray, refer to the [AWS X-Ray Setup Guide](https://github.com/Arinsz/cloudutveckling/blob/main/MDFiles/XrayGuide.md).
 
 ---
 

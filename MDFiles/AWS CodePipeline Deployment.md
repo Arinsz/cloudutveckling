@@ -87,7 +87,7 @@ sudo nano /etc/nginx/conf.d/default.conf
 
 * In the configuration file we need to add some code to redirect HTTP Traffic to HTTPS:
 
-![Nginx Configuration](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/nginx.jpg))
+Nginx Configuration![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/nginx.jpg))
 
 
 
@@ -147,7 +147,7 @@ Navigate to **Codebuild/Build Projects**
 - **Start build**: Press start build to verify that the build is succeeded. 
 
 
-![Build Success](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/BuildSuccess.jpg)
+![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/c29931e49a45d9d5e123d867a77edaf0d9372d45/src/main/resources/static/images/Github%20presentation%20Images/BuildSuccess.jpg?raw=true)
 
 ---
 ### Deploy:
@@ -179,7 +179,7 @@ Click on  **Create deployment group**
 * **Deploy provider**: Choose the application that you have already created in the AWS CodeDeploy.
 * **Deployment group**: Choose the deployment group that you have already created in the AWS CodeDeploy.
 
-![Build Success](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/Deploy.jpg)
+![Build Success](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/Deploy.jpg)
 
 
 ### Run the application 
@@ -192,4 +192,4 @@ In your EC2, Change directory to Server
  java -jar nameofyourjarfile.jar 
 ```
 
-![EC2](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/ec2.jpg)
+![EC2](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/ec2.jpg)

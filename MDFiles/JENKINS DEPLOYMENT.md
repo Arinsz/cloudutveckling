@@ -67,7 +67,7 @@ sudo nano /etc/nginx/conf.d/default.conf
 
 * In the configuration file we need to add some code to redirect HTTP Traffic to HTTPS:
 
-Nginx Configuration![Conf](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/nginx.jpg))
+Nginx Configuration![Conf](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/nginx.jpg)
 
 
 ---
@@ -98,7 +98,7 @@ Ensure the following Jenkins plugins are installed:
 2. Scroll down to **SSH Servers**.
 3. Enter the details for your EC2 server.
 
-   ![SSH Servers](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/JenkinsSSHBild.jpg)
+   ![SSH Servers](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/JenkinsSSHBild.jpg)
 
 ### Create a Freestyle Project
 
@@ -130,7 +130,7 @@ Ensure the following Jenkins plugins are installed:
 2. Click **Build Now**.
 
 
-![SSH Servers](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/JenkinsBuildSuccess.jpg)
+![SSH Servers](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/JenkinsBuildSuccess.jpg)
 
 
 ### Running the JAR File
@@ -143,4 +143,4 @@ java -jar techstore-0.0.1-SNAPSHOT.jar
 ```
 
 
-![App-running](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/JenkinsJarFile.jpg)
+![App-running](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/JenkinsJarFile.jpg)

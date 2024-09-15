@@ -23,7 +23,7 @@ The service map provides a visual representation of your application's services 
 Review Trace Data:
 Use the X-Ray Console to analyze trace data, review performance metrics, and understand request latencies.
 
-![Xray](https://github.com/Distansakademin/cloudutveckling-spring-Arinsz/blob/main/src/main/resources/static/images/Github%20presentation%20Images/Xray.jpg)
+![Xray](https://github.com/Arinsz/cloudutveckling/blob/main/src/main/resources/static/images/Github%20presentation%20Images/Xray.jpg)
 
 
 ### Annotations :
